@@ -29,8 +29,8 @@ public class CachingBreedFetcher implements BreedFetcher  {
             return cache.get(breed);
         }
         // if it dont have it then get it from breedfetcher and store in cache
-        List<String> subbreeds = fetcher.getSubBreeds(breed);
         callsMade++;
+        List<String> subbreeds = fetcher.getSubBreeds(breed);
         cache.put(breed, subbreeds);
         return subbreeds;
 
